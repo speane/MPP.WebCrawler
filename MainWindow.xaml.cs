@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using MPP.WebCrawler.Commands;
 using MPP.WebCrawler.ViewModel;
+using WebCrawler.Crawler;
 
 namespace MPP.WebCrawler
 {
@@ -27,6 +15,11 @@ namespace MPP.WebCrawler
             InitializeComponent();
 
             var model = new MainViewModel();
+
+            var crawlCommand = new CrawlCommand(model);
+            crawlCommand.Crawler = new SimpleWebCrawler();
+
+            model.CrawlCommand = new CrawlCommand(model);
             model.IncrementCommand = new IncrementCommand(model);
 
             DataContext = model;

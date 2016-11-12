@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MPP.WebCrawler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="incButton" Content="Click to add 1" Command="{Binding IncrementCommand}" HorizontalAlignment="Left" Margin="370,258,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label x:Name="totalClicksTitleLabel" Content="Total clicks:" HorizontalAlignment="Left" Margin="370,283,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="totalClickLabel" Content="{Binding Count}" HorizontalAlignment="Left" Margin="444,283,0,0" VerticalAlignment="Top"/>
+        Title="MainWindow" Height="543" Width="545">
+    <Grid Margin="0,0,25,0">
+        <Button x:Name="incButton" Content="Click to add 1" Command="{Binding IncrementCommand}" HorizontalAlignment="Left" Margin="378,443,0,0" VerticalAlignment="Top" Width="134"/>
+        <Label x:Name="totalClicksTitleLabel" Content="Total clicks:" HorizontalAlignment="Left" Margin="378,468,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="totalClickLabel" Content="{Binding Count}" HorizontalAlignment="Left" Margin="313,474,0,0" VerticalAlignment="Top"/>
+        <TreeView x:Name="crawlResultTreeView" HorizontalAlignment="Left" Height="396" Margin="10,104,0,0" VerticalAlignment="Top" Width="205"/>
+        <Label x:Name="crawlResultLabelTitleLabel" Content="Crawl result:" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="startCrawlingButton" Content="Start Crawling" HorizontalAlignment="Left" Margin="302,374,0,0" VerticalAlignment="Top" Width="134"/>
 
     </Grid>
 </Window>

@@ -7,14 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MPP.WebCrawler.Annotations;
+using WebCrawler.Result;
 
 namespace MPP.WebCrawler.ViewModel
 {
-    public class MainViewModel : IIncrementable, INotifyPropertyChanged
+    public class MainViewModel : IIncrementable, ICrawlable, INotifyPropertyChanged
     {
         private int _count;
 
         public ICommand IncrementCommand { get; set; }
+
+        public ICommand CrawlCommand { get; set; }
 
         public int Count {
             get { return _count; }
@@ -36,6 +39,11 @@ namespace MPP.WebCrawler.ViewModel
         protected virtual void RaiseOnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void SetCrawlResult(CrawlResult result)
+        {
+            throw new NotImplementedException();
         }
     }
 }

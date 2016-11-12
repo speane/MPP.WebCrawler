@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MPP.WebCrawler.Commands;
+using MPP.WebCrawler.ViewModel;
 
 namespace MPP.WebCrawler
 {
@@ -23,6 +25,11 @@ namespace MPP.WebCrawler
         public MainWindow()
         {
             InitializeComponent();
+
+            var model = new MainViewModel();
+            model.IncrementCommand = new IncrementCommand(model);
+
+            DataContext = model;
         }
     }
 }

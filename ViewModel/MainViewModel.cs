@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using MPP.WebCrawler.Annotations;
 
 namespace MPP.WebCrawler.ViewModel
@@ -12,6 +13,8 @@ namespace MPP.WebCrawler.ViewModel
     public class MainViewModel : IIncrementable, INotifyPropertyChanged
     {
         private int _count;
+
+        public ICommand IncrementCommand { get; set; }
 
         public int Count {
             get { return _count; }

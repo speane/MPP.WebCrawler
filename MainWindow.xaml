@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button x:Name="incButton" Content="Click to add 1" Command="{Binding IncrementCommand}" HorizontalAlignment="Left" Margin="370,258,0,0" VerticalAlignment="Top" Width="134"/>
+        <Label x:Name="totalClicksTitleLabel" Content="Total clicks:" HorizontalAlignment="Left" Margin="370,283,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="totalClickLabel" Content="{Binding Count}" HorizontalAlignment="Left" Margin="444,283,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

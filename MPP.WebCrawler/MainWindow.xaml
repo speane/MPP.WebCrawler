@@ -1,0 +1,22 @@
+﻿<Window x:Class="MPP.WebCrawler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MPP.WebCrawler"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="543" Width="545">
+    <Grid Margin="0,0,2,0">
+        <Button x:Name="IncButton" Content="Click to add 1" Command="{Binding IncrementCommand}" HorizontalAlignment="Left" Margin="378,443,0,0" VerticalAlignment="Top" Width="134"/>
+        <Label x:Name="TotalClicksTitleLabel" Content="Total clicks:" HorizontalAlignment="Left" Margin="379,467,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="TotalClickLabel" Content="{Binding Count}" HorizontalAlignment="Left" Margin="453,468,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.4,-0.5"/>
+        <TreeView x:Name="CrawlResultTreeView" HorizontalAlignment="Left" Height="396" Margin="10,104,0,0" VerticalAlignment="Top" Width="205"/>
+        <Label x:Name="CrawlResultLabelTitleLabel" Content="Crawl result:" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="StartCrawlingButton" Content="Start Crawling" Command="{Binding CrawlCommand}" HorizontalAlignment="Left" Margin="301,272,0,0" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="CustomCrawlDepthTextBox" Text="{Binding CrawlDepth}" HorizontalAlignment="Left" Height="23" Margin="403,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33"/>
+        <Label x:Name="CustomCrawlDepthTitleLabel" Content="Custom crawl depth" HorizontalAlignment="Left" Margin="279,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.184,0"/>
+        <TextBox x:Name="CustomRootResourceTextBox" Text="{Binding CustomRootResource}" HorizontalAlignment="Left" Height="23" Margin="279,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <Label x:Name="CustomRootResourceTitleLabel" Content="Custom crawl root resource" HorizontalAlignment="Left" Margin="279,104,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
